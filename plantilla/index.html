@@ -1,0 +1,10 @@
+{%extends 'core.html'%}
+{%block body%}
+
+{%for i in lista%}
+{{i.titulo}}
+<img src="media/{{i.imagen_g}}" class='imagen'>
+	{{i.fecha.anio}}
+{%endfor%}
+
+{%endblock%}
