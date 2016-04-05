@@ -1,10 +1,39 @@
 {%extends 'core.html'%}
+{%block extra_head%}
+<script type="text/javascript">
+  $(document).on('ready',function(){
+    $('.imagen').hover(function(){
+     var id = $(this).data('id');
+     $('#'+id+'_a').hide();
+     $('#'+id+'_b').show();
+    },function(){
+    var id = $(this).data('id');
+     $('#'+id+'_a').show();
+     $('#'+id+'_b').hide();
+    });
+  });
+</script>
+{%endblock%}
 {%block body%}
-
+<section class="main clearfix">
+<table class='tabla'>
 {%for i in lista%}
-{{i.titulo}}
-<img src="media/{{i.imagen_g}}" class='imagen'>
-	{{i.fecha.anio}}
+  {%if i.imagen_set.all|length > 0%}
+    <tr>
+      <td .class="td_t" >
+    	 {{i.anio}}
+    	</td>
+      </tr>
+      <tr>
+        {%for sub in i.imagen_set.all%}
+          <td>
+            <img src="media/{{sub.logo}}" class='imagen' data-id='{{sub.pk}}' id='{{sub.pk}}_a'>
+            <a href='{%url 'galeria' sub.pk%}'><img src="media/{{sub.imagen_g}}" class='imagen' data-id='{{sub.pk}}' id='{{sub.pk}}_b' hidden /></a>
+          </td>
+        {%endfor%}
+    </tr>
+  {%endif%}
 {%endfor%}
-
+</table>
+</section>
 {%endblock%}

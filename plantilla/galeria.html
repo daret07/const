@@ -1,0 +1,8 @@
+{%extends 'core.html'%}
+{%block body%}
+<div class='galeria'>
+{%for i in imagenes%}
+<img src="../media/{{i.img}}">
+{%endfor%}
+</div>
+{%endblock%}

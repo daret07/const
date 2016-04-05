@@ -1,4 +1,18 @@
 .imagen{
  width: 100px;
  height: 100px;
+ border-radius: 100%;
+ margin: 20px 20px 20px 20px;
+}
+
+@font-face {
+    font-family: Nexa Light;
+    src: url(NexaLight.otf);
+}
+*{
+	font-family: 'Nexa Light' !important;
+}
+body{
+	width: 100%;
+	min-height: 100%
 }
