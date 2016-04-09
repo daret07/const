@@ -23,3 +23,7 @@ class imagen(models.Model):
 class galeria(models.Model):
 	img         = models.FileField(max_length=50)
 	padre		= models.ForeignKey(imagen)
+
+class imagen_galeria_principal(models.Model):
+  imagen_principal    = models.FileField(max_length=50)
+  Galeria             = models.ForeignKey(imagen)

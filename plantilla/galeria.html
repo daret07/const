@@ -1,19 +1,34 @@
 {%extends 'core.html'%}
 {%block body%}
+<style type="text/css">
+
+.galeria{
+    padding-left: 190px;
+    width: 100%;
+    height: 100%!important;
+}
+.galeria .image{
+    width: 100%;
+    max-width: none !important;
+    clip: auto;
+}
+</style>
 <div class='galeria'>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval='false'>
   <!-- Indicators -->
   <!-- Wrapper for slides -->
+  {%for i in index_g%}
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="#" alt="...">
+      <img src="../media/{{i.imagen_principal}}" class="image" >
       <div class="carousel-caption">
         ...
       </div>
     </div>
+    {%endfor%}
     {%for i in imagenes%}
     <div class="item">
-      <img src="../media/{{i.img}}">
+      <img src="../media/{{i.img}}" class="image">
       <div class="carousel-caption">
       </div>
     </div>
