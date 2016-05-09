@@ -115,6 +115,7 @@ h5, h6          { font-weight: bolder }
     header nav ul li a:hover,
     header nav ul li a.selected{
         color: #969595;
+        text-decoration: none;
     }
 
     header .footer{
@@ -271,6 +272,7 @@ h5, h6          { font-weight: bolder }
 
 .main .work a:hover .caption{
     opacity: 1;
+    text-decoration: none;
 }
 
 

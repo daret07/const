@@ -4,15 +4,22 @@
  border-radius: 100%;
  margin: 20px 20px 20px 20px;
 }
+.td_t{
+  padding-left: 15px;
+}
 
 @font-face {
     font-family: Nexa Light;
     src: url(NexaLight.otf);
 }
 *{
-	font-family: 'Nexa Light' !important;
+	font-family: 'Nexa Light';
 }
 body{
 	width: 100%;
-	min-height: 100%
+	min-height: 100%;
+}
+
+a:hover{
+  text-decoration: none;
 }
