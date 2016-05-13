@@ -15,6 +15,7 @@
 </script>
 {%endblock%}
 {%block body%}
+<section class="main clearfix">
 <table class='tabla'>
 {%for i in lista%}
   {%if i.imagen_set.all|length > 0%}
@@ -34,4 +35,5 @@
   {%endif%}
 {%endfor%}
 </table>
+</section>
 {%endblock%}
