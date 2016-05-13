@@ -27,3 +27,12 @@ class galeria(models.Model):
 class imagen_galeria_principal(models.Model):
   imagen_principal    = models.FileField(max_length=50)
   Galeria             = models.ForeignKey(imagen)
+
+
+class equipo(models.Model):
+  foto        = models.FileField(max_length=20,blank=True,null=True)
+  nombre      = models.CharField(max_length=50,blank=True,null=True)
+  puesto      = models.CharField(max_length=100,blank=True,null=True)
+  correo      = models.CharField(max_length=100,blank=True,null=True)
+  descripcion = models.CharField(max_length=500,blank=True,null=True)
+  logo        = models.FileField(max_length=20,blank=True,null=True)

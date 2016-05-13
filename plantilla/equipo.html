@@ -1,0 +1,22 @@
+{%extends 'core.html'%}
+{%block extra_head%}
+<style type="text/css">
+#equipo{
+  margin-left: 2%;
+}
+</style>
+{%endblock%}
+{%block body%}
+<div id='equipo'>
+  {%for i in equipo%}
+  <div>
+    <div>
+      <img src="/mas_arq/media/{{i.foto}}" class='imagen' data-id='{{i.pk}}'>
+    </div>
+    <div>
+      {{i.nombre}}
+    </div>
+  </div>
+  {%endfor%}
+</div>
+{%endblock%}

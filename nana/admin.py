@@ -1,5 +1,5 @@
 from django.contrib import admin
-from nana.models import fecha,imagen,galeria,imagen_galeria_principal
+from nana.models import fecha,imagen,galeria,imagen_galeria_principal,equipo
 
 class imagenAdmin(admin.ModelAdmin):
 	model         = imagen
@@ -15,8 +15,12 @@ class imagen_galeria_principalAdmin(admin.ModelAdmin):
   model         = imagen_galeria_principal
   list_display  = ('pk','imagen_principal','Galeria')
 
+class equipoAdmin(admin.ModelAdmin):
+  model         = equipo 
+  list_display  = ('pk','nombre','puesto','correo')
+
 admin.site.register(imagen,imagenAdmin)
 admin.site.register(fecha,fechaAdmin)
 admin.site.register(galeria,galeriaAdmin)
 admin.site.register(imagen_galeria_principal,imagen_galeria_principalAdmin)
-
+admin.site.register(equipo,equipoAdmin)

@@ -22,8 +22,8 @@
 		<nav>
 			<ul>
 				<li><a href="{%url 'index'%}" class="selected"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;INICIO</a></li>
-				<li><a href="#"><span class='glyphicon glyphicon-earphone'></span>&nbsp;&nbsp;&nbsp;CONTACTO</a></li>
-				<li><a href="#"><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;&nbsp;EQUIPO</a></li>
+				<li><a href="{%url 'pagina' pagina='contacto'%}"><span class='glyphicon glyphicon-earphone'></span>&nbsp;&nbsp;&nbsp;CONTACTO</a></li>
+				<li><a href="{%url 'pagina' pagina='equipo'%}"><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;&nbsp;EQUIPO</a></li>
 			</ul>
 		</nav><!-- end navigation menu -->
 
@@ -43,8 +43,9 @@
 			</div><!-- end rights -->
 		</div ><!-- end footer -->
 	</header><!-- end header -->
-
+<section class="main clearfix">
 {%block body%}
 {%endblock%}
+</section>
 </body>
 </html>
