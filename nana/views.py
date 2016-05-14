@@ -20,10 +20,10 @@ def pagina(request,pagina=None,base=None):
   params=globals()[pagina]()
   return TemplateResponse(request,pagina+'.html',params)
 
-def equipo():
+def equipo(request):
   equip = equipos.objects.all()
-  return {'equipo':equip}
+  return TemplateResponse(request,'contacto.html',{'equipo':equip})
 
-def contacto():
+def contacto(request):
   algo ='lakjsdhflkajshflkajshdflkajsdh'
-  return {'parametros':algo}
+  return TemplateResponse(request,'contacto.html',{'imagenes':algo})
