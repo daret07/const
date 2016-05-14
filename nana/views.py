@@ -15,15 +15,10 @@ def gal(request,img):
   index_g = imagen_galeria_principal.objects.filter(Galeria=img)
   return TemplateResponse(request,'galeria.html',{'imagenes':imgs,'index_g':index_g})
 
-
-def pagina(request,pagina=None,base=None):
-  params=globals()[pagina]()
-  return TemplateResponse(request,pagina+'.html',params)
-
-def equipo(request):
+def equipo():
   equip = equipos.objects.all()
-  return TemplateResponse(request,'contacto.html',{'equipo':equip})
+  return TemplateResponse(request,'equipo.html',{'equipo':equip})
 
-def contacto(request):
+def contacto():
   algo ='lakjsdhflkajshflkajshdflkajsdh'
   return TemplateResponse(request,'contacto.html',{'imagenes':algo})
