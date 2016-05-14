@@ -21,4 +21,4 @@ def equipo(request):
 
 def contacto(request):
   algo ='lakjsdhflkajshflkajshdflkajsdh'
-  return TemplateResponse(request,'contacto.html',{'imagenes':algo})
+  return TemplateResponse(request,'contacto.html',{'contacto':algo})
