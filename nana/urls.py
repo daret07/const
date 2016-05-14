@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.index, name='index'),
     url(r'^galeria/(?P<img>[0-9A-Za-z._%+-]+)',views.gal, name='galeria'),
-    url(r'^2016/(?P<pagina>\w+)/',views.pagina, name='pagina'),
+    url(r'^contato/',views.contacto, name='contacto'),
+    url(r'^equipo/',views.contacto, name='equipo'),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
