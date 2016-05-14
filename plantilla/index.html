@@ -28,7 +28,7 @@
         {%for sub in i.imagen_set.all%}
           <td>
             <img src="mas_arq/media/{{sub.logo}}" class='imagen' data-id='{{sub.pk}}' id='{{sub.pk}}_a'>
-            <a href='{%url 'galeria' img=sub.pk%}'><img src="mas_arq/media/{{sub.imagen_g}}" class='imagen' data-id='{{sub.pk}}' id='{{sub.pk}}_b' hidden /></a>
+            <a href='{%url 'galeria' sub.pk%}'><img src="mas_arq/media/{{sub.imagen_g}}" class='imagen' data-id='{{sub.pk}}' id='{{sub.pk}}_b' hidden /></a>
           </td>
         {%endfor%}
     </tr>
